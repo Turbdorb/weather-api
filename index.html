@@ -16,25 +16,15 @@
         <h1>Weather Dashboard</h1>
     </header>
 
-    <section class="row">
-        <div class="col-3">
+    <main class="row">
+        <div class="col-3 border-bottom">
             <h2>Search for a City:</h2>
             <div>
-                <input type="search" placeholder="search a city" id="cityInput">
-                <button class="btn" type="submit" id="searchBtn">Search</button>
+                <input type="search" class="form-control m-2" placeholder="search a city" id="cityInput">
             </div>
-            <!-- this will be the previous searches, make this a col -->
-            <div class="d-grid gap-2">
-                <button class="btn btn-primary">Atlanta</button>
-                <button class="btn btn-primary">San Antonio</button>
-                <button class="btn btn-primary">Placeholder</button>
-                <button class="btn btn-primary">Placeholder</button>
-                <button class="btn btn-primary">Placeholder</button>
-                <button class="btn btn-primary">Placeholder</button>
-            </div>
+            <button class="btn btn-primary m-2 w-100" type="submit" id="searchBtn">Search</button>
         </div>
-        <!-- make this be a row to the side of the search bar-->
-        <div class="card" style="width: 18rem;">
+        <div class="col-9 card">
             <div class="card-body">
                 <h2 id="cityName"></h2>
                 <p>Temp: <span class="temperature"></span></p>
@@ -42,56 +32,74 @@
                 <p>Humidity: <span class="humidity"></span></p>
             </div>
         </div>
-            <!-- make this a row under the above div -->
-            <div class="col-9">
-                <h3>5 Day Forecast:</h3>
-                <div class="card-group">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Temp: <span id="day1Temp"></span></p>
-                            <p>Wind: <span id="day1Wind"></span></p>
-                            <p>Humidity: <span id="day1Humidity"></span></p>
-                        </div>
+        
+        <!-- this will be the previous searches -->
+        <div class="col-3">
+            <button class="btn btn-primary">Atlanta</button>
+            <button class="btn btn-primary">San Antonio</button>
+            <button class="btn btn-primary">Placeholder</button>
+            <button class="btn btn-primary">Placeholder</button>
+            <button class="btn btn-primary">Placeholder</button>
+            <button class="btn btn-primary">Placeholder</button>
+        </div>
+
+        <div class="col-9">
+            <h3>5 Day Forecast:</h3>
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" id="day1Date"></h4>
+                        <p>Temp: <span id="day1Temp"></span></p>
+                        <p>Wind: <span id="day1Wind"></span></p>
+                        <p>Humidity: <span id="day1Humidity"></span></p>
                     </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Temp: <span id="day2Temp"></span></p>
-                            <p>Wind: <span id="day2Wind"></span></p>
-                            <p>Humidity: <span id="day2Humidity"></span></p>
-                        </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" id="day2Date"></h4>
+                        <p>Temp: <span id="day2Temp"></span></p>
+                        <p>Wind: <span id="day2Wind"></span></p>
+                        <p>Humidity: <span id="day2Humidity"></span></p>
                     </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Temp: <span id="day3Temp"></span></p>
-                            <p>Wind: <span id="day3Wind"></span></p>
-                            <p>Humidity: <span id="day3Humidity"></span></p>
-                        </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" id="day3Date"></h4>
+                        <p>Temp: <span id="day3Temp"></span></p>
+                        <p>Wind: <span id="day3Wind"></span></p>
+                        <p>Humidity: <span id="day3Humidity"></span></p>
                     </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Temp: <span id="day4Temp"></span></p>
-                            <p>Wind: <span id="day4Wind"></span></p>
-                            <p>Humidity: <span id="day4Humidity"></span></p>
-                        </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" id="day4Date"></h4>
+                        <p>Temp: <span id="day4Temp"></span></p>
+                        <p>Wind: <span id="day4Wind"></span></p>
+                        <p>Humidity: <span id="day4Humidity"></span></p>
                     </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Temp: <span id="day5Temp"></span></p>
-                            <p>Wind: <span id="day5Wind"></span></p>
-                            <p>Humidity: <span id="day5Humidity"></span></p>
-                        </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" id="day5Date"></h4>
+                        <p>Temp: <span id="day5Temp"></span></p>
+                        <p>Wind: <span id="day5Wind"></span></p>
+                        <p>Humidity: <span id="day5Humidity"></span></p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
         integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-    <script src="./assets/script.js"></script>
+    <!-- <script src="./assets/script.js"></script> -->
 </body>
 
 </html>
