@@ -1,4 +1,3 @@
-// http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
 // "https://api.openweathermap.org/data/2.5/weather?q={CITY-NAME}&appid={API-KEY}" 
 // "https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}"
 var todaysDate = dayjs().format("(MM/DD/YYYY)");
@@ -16,6 +15,9 @@ $('#searchBtn').on('click', function() {
         .then(function (data) {
             console.log(data);
             $('#cityName').text(inputCity + ' ' + todaysDate);
+            $('#temperature').text(data.main.temp + " Degree F");
+            $('#wind').text(data.wind.speed + " MPH");
+            $('#humidity').text(data.main.humidity + "%");
             var lat = (data.coord.lat);
             var lon = (data.coord.lon);
             console.log(lat);
@@ -25,7 +27,7 @@ $('#searchBtn').on('click', function() {
 })
 
 function getCoords(lat, lon) {
-    var coordsURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=6&units=imperial&exclude=minutely,hourly&appid=6788bcc0725766846d2e8c90df441b50";
+    var coordsURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&exclude=minutely,hourly&appid=6788bcc0725766846d2e8c90df441b50";
 
     fetch(coordsURL)
         .then(function (response) {
@@ -34,10 +36,34 @@ function getCoords(lat, lon) {
         .then (function (data) {
             console.log(data);
 
-            $('#day1Date').text(dayjs(data.list[1].dt_txt).format('MM/DD/YYYY'));
-            $('#day1Temp').text(data.list[1].main.temp + " Degree F");
-            $('#day1Wind').text(data.list[1].wind.speed + " MPH");
-            $('#day1Humidity').text(data.list[1].main.humidity + "%");
+            $('#day1Date').text(dayjs(data.list[4].dt_txt).format('MM/DD/YYYY'));
+            $('#day1Temp').text(data.list[4].main.temp + " Degree F");
+            $('#day1Wind').text(data.list[4].wind.speed + " MPH");
+            $('#day1Humidity').text(data.list[4].main.humidity + "%");
+            
+            $('#day2Date').text(dayjs(data.list[12].dt_txt).format('MM/DD/YYYY'));
+            $('#day2Temp').text(data.list[12].main.temp + " Degree F");
+            $('#day2Wind').text(data.list[12].wind.speed + " MPH");
+            $('#day2Humidity').text(data.list[12].main.humidity + "%");
+            
+            $('#day3Date').text(dayjs(data.list[20].dt_txt).format('MM/DD/YYYY'));
+            $('#day3Temp').text(data.list[20].main.temp + " Degree F");
+            $('#day3Wind').text(data.list[20].wind.speed + " MPH");
+            $('#day3Humidity').text(data.list[20].main.humidity + "%");
+            
+            $('#day4Date').text(dayjs(data.list[28].dt_txt).format('MM/DD/YYYY'));
+            $('#day4Temp').text(data.list[28].main.temp + " Degree F");
+            $('#day4Wind').text(data.list[28].wind.speed + " MPH");
+            $('#day4Humidity').text(data.list[28].main.humidity + "%");
+            
+            $('#day5Date').text(dayjs(data.list[36].dt_txt).format('MM/DD/YYYY'));
+            $('#day5Temp').text(data.list[36].main.temp + " Degree F");
+            $('#day5Wind').text(data.list[36].wind.speed + " MPH");
+            $('#day5Humidity').text(data.list[36].main.humidity + "%");
         })
+}
+
+// store inputCity into local storage and get from local storage then append as a button for user
+function prevCity() {
 
 }

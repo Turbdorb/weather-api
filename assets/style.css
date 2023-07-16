@@ -1,0 +1,10 @@
+.dark {
+    background-color: midnightblue;
+    color: white;
+}
+
+header {
+    padding: 20px;
+    background-color: darkslateblue;
+    color: white;
+}

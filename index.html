@@ -18,7 +18,7 @@
 
     <main class="row">
         <div class="col-3 border-bottom">
-            <h2>Search for a City:</h2>
+            <h2 class="m-2">Search for a City:</h2>
             <div>
                 <input type="search" class="form-control m-2" placeholder="search a city" id="cityInput">
             </div>
@@ -34,20 +34,15 @@
         </div>
         
         <!-- this will be the previous searches -->
-        <div class="col-3">
-            <button class="btn btn-primary">Atlanta</button>
-            <button class="btn btn-primary">San Antonio</button>
-            <button class="btn btn-primary">Placeholder</button>
-            <button class="btn btn-primary">Placeholder</button>
-            <button class="btn btn-primary">Placeholder</button>
-            <button class="btn btn-primary">Placeholder</button>
+        <div class="col-3" id="prevSearch">
+
         </div>
 
         <div class="col-9">
             <h3>5 Day Forecast:</h3>
             <div class="card-group">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body dark">
                         <h4 class="card-title" id="day1Date"></h4>
                         <p>Temp: <span id="day1Temp"></span></p>
                         <p>Wind: <span id="day1Wind"></span></p>
@@ -56,7 +51,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body dark">
                         <h4 class="card-title" id="day2Date"></h4>
                         <p>Temp: <span id="day2Temp"></span></p>
                         <p>Wind: <span id="day2Wind"></span></p>
@@ -65,7 +60,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body dark">
                         <h4 class="card-title" id="day3Date"></h4>
                         <p>Temp: <span id="day3Temp"></span></p>
                         <p>Wind: <span id="day3Wind"></span></p>
@@ -74,7 +69,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body dark">
                         <h4 class="card-title" id="day4Date"></h4>
                         <p>Temp: <span id="day4Temp"></span></p>
                         <p>Wind: <span id="day4Wind"></span></p>
@@ -83,7 +78,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body dark">
                         <h4 class="card-title" id="day5Date"></h4>
                         <p>Temp: <span id="day5Temp"></span></p>
                         <p>Wind: <span id="day5Wind"></span></p>
