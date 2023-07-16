@@ -15,7 +15,7 @@ $('#searchBtn').on('click', function() {
         .then(function (data) {
             console.log(data);
             $('#cityName').text(inputCity + ' ' + todaysDate);
-            $('#temperature').text(data.main.temp + " Degree F");
+            $('#temperature').text(data.main.temp + " °F");
             $('#wind').text(data.wind.speed + " MPH");
             $('#humidity').text(data.main.humidity + "%");
             var lat = (data.coord.lat);
@@ -37,27 +37,27 @@ function getCoords(lat, lon) {
             console.log(data);
 
             $('#day1Date').text(dayjs(data.list[4].dt_txt).format('MM/DD/YYYY'));
-            $('#day1Temp').text(data.list[4].main.temp + " Degree F");
+            $('#day1Temp').text(data.list[4].main.temp + " °F");
             $('#day1Wind').text(data.list[4].wind.speed + " MPH");
             $('#day1Humidity').text(data.list[4].main.humidity + "%");
             
             $('#day2Date').text(dayjs(data.list[12].dt_txt).format('MM/DD/YYYY'));
-            $('#day2Temp').text(data.list[12].main.temp + " Degree F");
+            $('#day2Temp').text(data.list[12].main.temp + " °F");
             $('#day2Wind').text(data.list[12].wind.speed + " MPH");
             $('#day2Humidity').text(data.list[12].main.humidity + "%");
             
             $('#day3Date').text(dayjs(data.list[20].dt_txt).format('MM/DD/YYYY'));
-            $('#day3Temp').text(data.list[20].main.temp + " Degree F");
+            $('#day3Temp').text(data.list[20].main.temp + " °F");
             $('#day3Wind').text(data.list[20].wind.speed + " MPH");
             $('#day3Humidity').text(data.list[20].main.humidity + "%");
             
             $('#day4Date').text(dayjs(data.list[28].dt_txt).format('MM/DD/YYYY'));
-            $('#day4Temp').text(data.list[28].main.temp + " Degree F");
+            $('#day4Temp').text(data.list[28].main.temp + " °F");
             $('#day4Wind').text(data.list[28].wind.speed + " MPH");
             $('#day4Humidity').text(data.list[28].main.humidity + "%");
             
             $('#day5Date').text(dayjs(data.list[36].dt_txt).format('MM/DD/YYYY'));
-            $('#day5Temp').text(data.list[36].main.temp + " Degree F");
+            $('#day5Temp').text(data.list[36].main.temp + " °F");
             $('#day5Wind').text(data.list[36].wind.speed + " MPH");
             $('#day5Humidity').text(data.list[36].main.humidity + "%");
         })
